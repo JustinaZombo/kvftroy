@@ -307,7 +307,7 @@
       </div>
 
       <!-- Contact Form -->
-      <form action="https://api.web3forms.com/submit" method="POST" class="bg-white/10 backdrop-blur-sm rounded-3xl p-10 border border-white/20">
+      <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" class="bg-white/10 backdrop-blur-sm rounded-3xl p-10 border border-white/20">
         <div class="grid md:grid-cols-2 gap-6 mb-6">
           <div>
             <label class="block text-sm font-semibold text-emerald-400 mb-2 tracking-widest uppercase">Your Name</label>
@@ -336,6 +336,14 @@
           <label class="block text-sm font-semibold text-emerald-400 mb-2 tracking-widest uppercase">Tell Us About Your Parts</label>
           <textarea name="message" rows="4" required placeholder="What material, quantity, and finish are you looking for?"
             class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-emerald-400 transition resize-none"></textarea>
+        </div>
+
+        <!-- File Upload -->
+        <div class="mb-6">
+          <label class="block text-sm font-semibold text-emerald-400 mb-2 tracking-widest uppercase">Attach Photos or Drawings (Optional)</label>
+          <input type="file" name="attachment" multiple accept="image/*,.pdf,.dwg,.dxf,.step,.stp,.iges,.igs"
+            class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-emerald-600 file:text-white file:font-semibold hover:file:bg-emerald-500 file:cursor-pointer cursor-pointer focus:outline-none focus:border-emerald-400 transition">
+          <p class="text-xs text-gray-400 mt-2">Images, PDFs, or CAD files. Max 10MB total. For larger files, please email them directly to <a href="mailto:kyle@kvftroy.com" class="text-emerald-400 hover:text-emerald-300 underline">kyle@kvftroy.com</a>.</p>
         </div>
         <input type="hidden" name="access_key" value="9e0de7e7-e043-4c39-b8fc-57b2662f2020">
         <input type="hidden" name="subject" value="New Sample Request from kvftroy.com">
